@@ -4,7 +4,7 @@
 
 Name:         %{?scl_prefix}%{pkg_name}
 Version:      2.6
-Release:      17.2%{?dist}
+Release:      17.3%{?dist}
 Summary:      Java library for code generators
 License:      CDDL and GPLv2
 URL:          http://codemodel.java.net
@@ -71,6 +71,9 @@ set -e -x
 %license LICENSE.html
 
 %changelog
+* Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 2.6-17.3
+- maven33 rebuild #2
+
 * Sat Jan 09 2016 Michal Srb <msrb@redhat.com> - 2.6-17.2
 - maven33 rebuild
 
