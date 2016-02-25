@@ -4,7 +4,7 @@
 
 Name:         %{?scl_prefix}%{pkg_name}
 Version:      2.6
-Release:      17.3%{?dist}
+Release:      17.4%{?dist}
 Summary:      Java library for code generators
 License:      CDDL and GPLv2
 URL:          http://codemodel.java.net
@@ -17,7 +17,7 @@ Patch0:       %{pkg_name}-remove-istack-commons-dependency.patch
 
 BuildArch:     noarch
 
-BuildRequires: %{?scl_prefix_java_common}maven-local
+BuildRequires: %{?scl_prefix}maven-local
 BuildRequires: %{?scl_prefix_maven}maven-enforcer-plugin
 BuildRequires: %{?scl_prefix_maven}maven-release-plugin
 BuildRequires: %{?scl_prefix_maven}mvn(net.java:jvnet-parent:pom:)
@@ -71,6 +71,9 @@ set -e -x
 %license LICENSE.html
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 2.6-17.4
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 2.6-17.3
 - maven33 rebuild #2
 
